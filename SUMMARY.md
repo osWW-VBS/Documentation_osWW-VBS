@@ -8,7 +8,11 @@
 
 ----
 
+<<<<<<< HEAD
 * [Official Recommendations](documentation/CMS_Recommendations/README.md )
+=======
+* [Official Recommendations](documentation/CMS_Recommendations/README.md)
+>>>>>>> 14f390dcde7cba91ed11af3879626cfdf22bd3d2
     * [Electrons](documentation/CMS_Recommendations/Electron.md)
     * [Muons](documentation/CMS_Recommendations/Muon.md)
     * [MET](documentation/CMS_Recommendations/MET.md)
@@ -33,3 +37,4 @@
 * [Analysis Code Details](documentation/analysis-macros/README.md)
     - [Pre-selection](documentation/analysis-macros/pre-selection.md)
     - [Final Event selection](documentation/analysis-macros/event-selection.md)
+
