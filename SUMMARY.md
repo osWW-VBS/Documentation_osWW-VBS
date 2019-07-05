@@ -1,7 +1,5 @@
 # Summary
 
-## Use headings to create page groups like this one
-
 * [Introduction](README.md)
 
 ----
@@ -35,8 +33,4 @@
 * [Analysis Code Details](documentation/analysis-macros/README.md)
     - [Pre-selection](documentation/analysis-macros/pre-selection.md)
     - [Final Event selection](documentation/analysis-macros/event-selection.md)
-
-## A second page group
-
-* [Yet another page](another-page.md)
 
