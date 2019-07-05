@@ -20,3 +20,8 @@ _book
 *.pdf
 
 # End of https://www.gitignore.io/api/gitbook
+
+
+#custom ignores
+*.html
+gitbook/
