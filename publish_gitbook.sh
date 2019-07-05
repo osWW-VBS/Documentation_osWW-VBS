@@ -5,7 +5,7 @@ gitbook install && gitbook build
 git checkout gh-pages
 
 # pull the latest updates
-git pull my gh-pages --rebase
+git pull origin gh-pages --rebase
 
 # copy the static site files into the current directory.
 cp -R _book/* .
@@ -20,8 +20,8 @@ git add .
 # commit
 git commit -a -m "Update docs"
 
-# push to the my
-git push my gh-pages
+# push to the origin
+git push origin gh-pages
 
 # checkout to the master branch
 git checkout master
