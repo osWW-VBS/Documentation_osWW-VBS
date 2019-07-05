@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Pile-up · GitBook</title>
+        <title>Official Recommendations · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="Trigger.html" />
+    <link rel="next" href="Electron.html" />
     
     
-    <link rel="prev" href="Luminosity.html" />
+    <link rel="prev" href="../../vvVBS_documentation.html" />
     
 
     </head>
@@ -131,7 +131,7 @@
         
         
     
-        <li class="chapter " data-level="3.1" data-path="./">
+        <li class="chapter active" data-level="3.1" data-path="./">
             
                 <a href="./">
             
@@ -262,7 +262,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.1.10" data-path="Pileup.html">
+        <li class="chapter " data-level="3.1.10" data-path="Pileup.html">
             
                 <a href="Pileup.html">
             
@@ -460,7 +460,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Pile-up</a>
+        <a href="../.." >Official Recommendations</a>
     </h1>
 </div>
 
@@ -475,32 +475,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h4 id="table-of-content">Table of Content</h4>
-<ul>
-<li><a href="#pile-up">Pile-up</a><ul>
-<li><a href="#pog-recipes-for-moriond-2017">POG Recipes for Moriond 2017</a></li>
-<li><a href="#how-to-make-pu-distribution-for%20data">How To Make PU Distribution for data</a></li>
-</ul>
-</li>
-</ul>
-<hr>
-<h1 id="pile-up">Pile-up</h1>
-<p><a href="https://twiki.cern.ch/twiki/bin/view/CMS/PileupJSONFileforData" target="_blank">https://twiki.cern.ch/twiki/bin/view/CMS/PileupJSONFileforData</a></p>
-<h2 id="pog-recipes-for-moriond-2017">POG Recipes for Moriond 2017</h2>
-<ul>
-<li>Pile-up reweighting xsec = 69.2mb</li>
-</ul>
-<p>Ref: <a href="https://twiki.cern.ch/twiki/bin/viewauth/CMS/POGRecipesICHEP2016" target="_blank">https://twiki.cern.ch/twiki/bin/viewauth/CMS/POGRecipesICHEP2016</a></p>
-<h2 id="how-to-make-pu-distribution-for-data">How To Make PU Distribution for data</h2>
-<p>Command to run:</p>
-<pre><code class="lang-bash">pileupCalc.py -i MyAnalysisJSON.txt --inputLumiJSON pileup_latest.txt  --calcMode <span class="hljs-literal">true</span> --minBiasXsec 69200 --maxPileupB<span class="hljs-keyword">in</span> 50 --numPileupBins 50  MyDataPileupHistogram.root
-</code></pre>
-<p>where,</p>
-<ul>
-<li>MyAnalysisJSON.txt is the JSON file we are using. Generally it should be the golden JSON.</li>
-<li>pileup_latest.txt : this is input json file. It can be found at link: /afs/cern.ch/cms/CAF/CMSCOMM/COMM_DQM/certification/Collisions15/13TeV/PileUp/pileup_latest.txt</li>
-</ul>
-<p>Reference: <a href="https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupJSONFileforData#Pileup_JSON_Files_For_Run_II" target="_blank">https://twiki.cern.ch/twiki/bin/viewauth/CMS/PileupJSONFileforData#Pileup_JSON_Files_For_Run_II</a></p>
+                                <p>[To be updated...]</p>
 
                                 
                                 </section>
@@ -528,12 +503,12 @@
 
             
                 
-                <a href="Luminosity.html" class="navigation navigation-prev " aria-label="Previous page: Luminosity">
+                <a href="../../vvVBS_documentation.html" class="navigation navigation-prev " aria-label="Previous page: wv/zv vbs analysis work flow">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="Trigger.html" class="navigation navigation-next " aria-label="Next page: Trigger">
+                <a href="Electron.html" class="navigation navigation-next " aria-label="Next page: Electrons">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -544,7 +519,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Pile-up","level":"3.1.10","depth":2,"next":{"title":"Trigger","level":"3.1.11","depth":2,"path":"documentation/CMS_Recommendations/Trigger.md","ref":"documentation/CMS_Recommendations/Trigger.md","articles":[]},"previous":{"title":"Luminosity","level":"3.1.9","depth":2,"path":"documentation/CMS_Recommendations/Luminosity.md","ref":"documentation/CMS_Recommendations/Luminosity.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"documentation/CMS_Recommendations/Pileup.md","mtime":"2019-07-05T12:46:36.812Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T13:46:41.843Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Official Recommendations","level":"3.1","depth":1,"next":{"title":"Electrons","level":"3.1.1","depth":2,"path":"documentation/CMS_Recommendations/Electron.md","ref":"documentation/CMS_Recommendations/Electron.md","articles":[]},"previous":{"title":"wv/zv vbs analysis work flow","level":"2.1","depth":1,"path":"vvVBS_documentation.md","ref":"vvVBS_documentation.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"documentation/CMS_Recommendations/README.md","mtime":"2019-07-05T13:45:34.450Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-05T13:46:41.843Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
