@@ -8,12 +8,12 @@
 
 ----
 
-* [Official Recommendations]({{ site.url }}documentation/CMS_Recommendations/README.md )
-    * [Electrons]({{ site.url }}documentation/CMS_Recommendations/Electron.md)
-    * [Muons]({{ site.url }}documentation/CMS_Recommendations/Muon.md)
-    * [MET]({{ site.url }}documentation/CMS_Recommendations/MET.md)
-    * [VBF Jets]({{ site.url }}documentation/CMS_Recommendations/VBFjets.md)
-    * [FAT Jets]({{ site.url }}documentation/CMS_Recommendations/FATjet.md)
+* [Official Recommendations](documentation/CMS_Recommendations/README.md )
+    * [Electrons](documentation/CMS_Recommendations/Electron.md)
+    * [Muons](documentation/CMS_Recommendations/Muon.md)
+    * [MET](documentation/CMS_Recommendations/MET.md)
+    * [VBF Jets](documentation/CMS_Recommendations/VBFjets.md)
+    * [FAT Jets](documentation/CMS_Recommendations/FATjet.md)
     * [Data](documentation/CMS_Recommendations/Data.md)
     * [Jet Energy Correctios](documentation/CMS_Recommendations/JetCorrections.md)
     * [L1 ECAL prefire](documentation/CMS_Recommendations/L1ECALprefire.md)
