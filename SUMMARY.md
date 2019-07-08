@@ -34,3 +34,7 @@
     - [Pre-selection](documentation/analysis-macros/pre-selection.md)
     - [Final Event selection](documentation/analysis-macros/event-selection.md)
 
+----
+
+* [MC studies](documentation/monte-carlo/README.md)
+    - [Madgraph](documentation/monte-carlo/Madgraph.md)
