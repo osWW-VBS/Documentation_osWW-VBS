@@ -22,10 +22,11 @@ All code for our analysis is placed [https://github.com/osWW-VBS](https://github
         * This script hadds similar root files and also creates a text file having info of sample name, its cross-section, number of events, number of negative events, etc.
         * Our plotting macro uses this text file for making data-mc distrib
         * Also, Hadd root files for background estimation using script : [hadd.py](https://github.com/osWW-VBS/WWAnalysisRun2/blob/bacon_80x_MuonPtScale/hadd.py)
-- **STEP: 3:** Data driven background estimation using : [EXOVVFitter Framework](https://github.com/osWW-VBS/EXOVVFitter)
+- **STEP: 3:** Control plots [https://github.com/osWW-VBS/PlottingCodes/tree/master/ControlPlots](https://github.com/osWW-VBS/PlottingCodes/tree/master/ControlPlots)
+- **STEP: 4:** Data driven background estimation using : [EXOVVFitter Framework](https://github.com/osWW-VBS/EXOVVFitter)
     + Get Systematic shape and root file up/down for combine using script [GetAll_Systematic_Shape.C](https://github.com/ram1123/EXOVVFitter/blob/master/GetAll_Systematic_Shape.C)
-- **STEP: 4:** Get root file for combine: [https://github.com/osWW-VBS/PlottingCodes/tree/master/LimitCardGenerate](https://github.com/osWW-VBS/PlottingCodes/tree/master/LimitCardGenerate)
-- **STEP: 5:** Combine uses: *To be updated...*
+- **STEP: 5:** Get root file for combine: [https://github.com/osWW-VBS/PlottingCodes/tree/master/LimitCardGenerate](https://github.com/osWW-VBS/PlottingCodes/tree/master/LimitCardGenerate)
+- **STEP: 6:** Combine uses: *To be updated...*
 
 ## Machine Learning Studies
 
