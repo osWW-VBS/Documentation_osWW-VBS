@@ -38,3 +38,8 @@
 
 * [MC studies](documentation/monte-carlo/README.md)
     - [Madgraph](documentation/monte-carlo/Madgraph.md)
+
+----
+
+* [Some Important Links](documentation/some_documentation_references.md)
+
