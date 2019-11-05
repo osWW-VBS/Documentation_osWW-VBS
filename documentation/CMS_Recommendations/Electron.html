@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Trigger · GitBook</title>
+        <title>Electrons · GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../data-mc/" />
+    <link rel="next" href="Muon.html" />
     
     
-    <link rel="prev" href="Pileup.html" />
+    <link rel="prev" href="./" />
     
 
     </head>
@@ -143,7 +143,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="3.1.1" data-path="Electron.html">
+        <li class="chapter active" data-level="3.1.1" data-path="Electron.html">
             
                 <a href="Electron.html">
             
@@ -273,7 +273,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="3.1.11" data-path="Trigger.html">
+        <li class="chapter " data-level="3.1.11" data-path="Trigger.html">
             
                 <a href="Trigger.html">
             
@@ -497,7 +497,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >Trigger</a>
+        <a href="../.." >Electrons</a>
     </h1>
 </div>
 
@@ -514,44 +514,198 @@
                                 
                                 <h4 id="table-of-content">Table of Content</h4>
 <ul>
-<li><a href="#trigger-used">Trigger Used</a><ul>
-<li><a href="#run-2016">Run-2016</a></li>
-<li><a href="#run-2017">Run-2017</a></li>
-<li><a href="#run-2018">Run-2018</a></li>
+<li><a href="#electron">Electron</a><ul>
+<li><a href="#cms-official-recommendation">CMS Official Recommendation</a></li>
+<li><a href="#code-implementation">Code implementation</a><ul>
+<li><a href="#electron-id">Electron ID</a></li>
+<li><a href="#electron-trigger-scale-factor">Electron Trigger Scale Factor</a></li>
+<li><a href="#electron-id/iso-scale-factor">Electron ID/ISO Scale Factor</a></li>
 </ul>
 </li>
-<li><a href="#check-trigger-prescale-and-filter">Check Trigger Prescale and filter</a></li>
-<li><a href="#how-to-calculate-trigger-efficiency">How to calculate trigger efficiency</a></li>
-<li><a href="#single-electron-trigger-scale-factor">Single Electron Trigger Scale Factor</a></li>
-<li><a href="#single-muon-trigger-scale-factor">Single Muon Trigger Scale Factor</a></li>
+</ul>
+</li>
 </ul>
 <hr>
-<h1 id="trigger-used">Trigger Used</h1>
-<h2 id="run-2016">Run-2016</h2>
-<h2 id="run-2017">Run-2017</h2>
+<h1 id="cms-official-recommendation">CMS Official Recommendation</h1>
+<h2 id="id">ID</h2>
+<p><strong>94X-tuned selection, barrel cuts ( |eta supercluster| &lt;= 1.479)</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Veto (94X)</th>
+<th>Loose (94X)</th>
+<th>Medium (94X)</th>
+<th>Tight (94X)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>full5x5_sigmaIetaIeta</td>
+<td>0.0126</td>
+<td>0.0112</td>
+<td>0.0106</td>
+<td>0.0104</td>
+</tr>
+<tr>
+<td>abs(dEtaSeed)</td>
+<td>0.00463</td>
+<td>0.00377</td>
+<td>0.0032</td>
+<td>0.00255</td>
+</tr>
+<tr>
+<td>abs(dPhiIn)</td>
+<td>0.148</td>
+<td>0.0884</td>
+<td>0.0547</td>
+<td>0.022</td>
+</tr>
+<tr>
+<td>H/E</td>
+<td>0.05+1.16/E<sub>SC</sub>+0.0324&#x3C1;/E<sub>SC</sub></td>
+<td>0.05+1.16/E<sub>SC</sub>+0.0324&#x3C1;/E<sub>SC</sub></td>
+<td>0.046+1.16/E<sub>SC</sub>+0.0324&#x3C1;/E<sub>SC</sub></td>
+<td>0.026+1.15/E<sub>SC</sub>+0.0324&#x3C1;/E<sub>SC</sub></td>
+</tr>
+<tr>
+<td>relIsoWithEA</td>
+<td>0.198+0.506/p<sub>T</sub></td>
+<td>0.112+0.506/p<sub>T</sub></td>
+<td>0.0478+0.506/p<sub>T</sub></td>
+<td>0.0287+0.506/p<sub>T</sub></td>
+</tr>
+<tr>
+<td>abs(1/E-1/p)</td>
+<td>0.209</td>
+<td>0.193</td>
+<td>0.184</td>
+<td>0.159</td>
+</tr>
+<tr>
+<td>expected missing inner hits &lt;=</td>
+<td>2</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>pass conversion veto</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>94X-tuned selection, endcap cuts ( |eta supercluster| &gt; 1.479)</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Veto (94X)</th>
+<th>Loose (94X)</th>
+<th>Medium (94X)</th>
+<th>Tight (94X)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>full5x5_sigmaIetaIeta &lt;</td>
+<td>0.0457</td>
+<td>0.0425</td>
+<td>0.0387</td>
+<td>0.0353</td>
+</tr>
+<tr>
+<td>abs(dEtaSeed) &lt;</td>
+<td>0.00814</td>
+<td>0.00674</td>
+<td>0.00632</td>
+<td>0.00501</td>
+</tr>
+<tr>
+<td>abs(dPhiIn) &lt;</td>
+<td>0.19</td>
+<td>0.169</td>
+<td>0.0394</td>
+<td>0.0236</td>
+</tr>
+<tr>
+<td>H/E &lt;</td>
+<td>0.05+2.54/E<sub>SC</sub>+0.183*&#x3C1;/E<sub>SC</sub></td>
+<td>0.0441+2.54/E<sub>SC</sub>+0.183*&#x3C1;/E<sub>SC</sub></td>
+<td>0.0275+2.52/E<sub>SC</sub>+0.183*&#x3C1;/E<sub>SC</sub></td>
+<td>0.0188+2.06/E<sub>SC</sub>+0.183*&#x3C1;/E<sub>SC</sub></td>
+</tr>
+<tr>
+<td>relIsoWithEA &lt;</td>
+<td>0.203+0.963/p<sub>T</sub></td>
+<td>0.108+0.963/p<sub>T</sub></td>
+<td>0.0658+0.963/p<sub>T</sub></td>
+<td>0.0445+0.963/p<sub>T</sub></td>
+</tr>
+<tr>
+<td>abs(1/E-1/p) &lt;</td>
+<td>0.132</td>
+<td>0.111</td>
+<td>0.0721</td>
+<td>0.0197</td>
+</tr>
+<tr>
+<td>expected missing inner hits &lt;=</td>
+<td>3</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>pass conversion veto</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+<td>yes</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Impact parameter cuts:</strong></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>barrel</th>
+<th>endcap</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>d0, cm</td>
+<td>0.05</td>
+<td>0.10</td>
+</tr>
+<tr>
+<td>dz, cm</td>
+<td>0.10</td>
+<td>0.20</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference:</strong> <a href="https://twiki.cern.ch/twiki/bin/view/CMS/CutBasedElectronIdentificationRun2#Working_points_for_94X_and_later" target="_blank">https://twiki.cern.ch/twiki/bin/view/CMS/CutBasedElectronIdentificationRun2#Working_points_for_94X_and_later</a></p>
+<h2 id="id-scale-factor">ID Scale Factor</h2>
 <ul>
-<li>For electrons: <code>HLT_Ele35_WPTight_Gsf_v</code></li>
-<li>For muons: <code>HLT_IsoMu27_v</code></li>
+<li>ID scale factor root file can be found <a href="https://twiki.cern.ch/twiki/pub/CMS/EgammaIDRecipesRun2/2017_ElectronTight.root" target="_blank">here</a></li>
+<li>Reference: <a href="https://twiki.cern.ch/twiki/bin/view/CMS/EgammaRunIIRecommendations#Fall17v2" target="_blank">https://twiki.cern.ch/twiki/bin/view/CMS/EgammaRunIIRecommendations#Fall17v2</a></li>
 </ul>
-<p>Both of these trigger are there throughout the year and they are lowest pre-scaled triggers.</p>
-<p><strong>Reference</strong>: <a href="https://cmsweb.cern.ch/confdb/" target="_blank">https://cmsweb.cern.ch/confdb/</a></p>
-<h2 id="run-2018">Run-2018</h2>
-<h1 id="check-trigger-prescale-and-filter">Check Trigger Prescale and filter</h1>
-<ol>
-<li>Go to: <a href="https://cmsweb.cern.ch/confdb/" target="_blank">https://cmsweb.cern.ch/confdb/</a></li>
-<li>click on <code>Explore Database</code></li>
-<li>click on <code>cdaq</code></li>
-<li>click on <code>Physics</code></li>
-<li>click on <code>Run2016</code> or whatever run you would like to see</li>
-<li>click on special run or on <code>25ns15e33</code> (e.g.)</li>
-<li>click on the <strong>latest version</strong></li>
-<li>Then click on the detailed view</li>
-<li>Search your <strong>trigger</strong> from the list</li>
-<li>Select the last filter of the sequence</li>
-</ol>
-<h1 id="how-to-calculate-trigger-efficiency">How to calculate trigger efficiency</h1>
-<h1 id="single-electron-trigger-scale-factor">Single Electron Trigger Scale Factor</h1>
-<h1 id="single-muon-trigger-scale-factor">Single Muon Trigger Scale Factor</h1>
+<h2 id="gsf-scale-factor">GSF Scale Factor</h2>
+<ul>
+<li>GSF scale factor root file can be found <a href="https://twiki.cern.ch/twiki/pub/CMS/Egamma2017DataRecommendations/egammaEffi.txt_EGM2D_runBCDEF_passingRECO.root" target="_blank">here</a></li>
+<li>Reference: <a href="https://twiki.cern.ch/twiki/bin/view/CMS/EgammaRunIIRecommendations#Electron_Scale_Factors" target="_blank">https://twiki.cern.ch/twiki/bin/view/CMS/EgammaRunIIRecommendations#Electron_Scale_Factors</a></li>
+</ul>
+<h1 id="code-implementation">Code implementation</h1>
+<h2 id="electron-id">Electron ID</h2>
+<p><a href="https://github.com/osWW-VBS/WWAnalysisRun2/blob/bacon_80x_MuonPtScale/src/Utils.cc#L111-L277" target="_blank">https://github.com/osWW-VBS/WWAnalysisRun2/blob/bacon_80x_MuonPtScale/src/Utils.cc#L111-L277</a></p>
+<h3 id="electron-trigger-scale-factor">Electron Trigger Scale Factor</h3>
+<h3 id="electron-idiso-scale-factor">Electron ID/ISO Scale Factor</h3>
 
                                 
                                 </section>
@@ -579,12 +733,12 @@
 
             
                 
-                <a href="Pileup.html" class="navigation navigation-prev " aria-label="Previous page: Pile-up">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: Official Recommendations">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../data-mc/" class="navigation navigation-next " aria-label="Next page: Data-MC info">
+                <a href="Muon.html" class="navigation navigation-next " aria-label="Next page: Muons">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -595,7 +749,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Trigger","level":"3.1.11","depth":2,"next":{"title":"Data-MC info","level":"4.1","depth":1,"path":"documentation/data-mc/README.md","ref":"documentation/data-mc/README.md","articles":[{"title":"Data sample","level":"4.1.1","depth":2,"path":"documentation/data-mc/datainfo.md","ref":"documentation/data-mc/datainfo.md","articles":[]},{"title":"MC Samples","level":"4.1.2","depth":2,"path":"documentation/data-mc/mc-cross-section.md","ref":"documentation/data-mc/mc-cross-section.md","articles":[]},{"title":"Generated Ntuples Details","level":"4.1.3","depth":2,"path":"documentation/data-mc/Ntuple_Details.md","ref":"documentation/data-mc/Ntuple_Details.md","articles":[]}]},"previous":{"title":"Pile-up","level":"3.1.10","depth":2,"path":"documentation/CMS_Recommendations/Pileup.md","ref":"documentation/CMS_Recommendations/Pileup.md","articles":[]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"documentation/CMS_Recommendations/Trigger.md","mtime":"2019-07-16T10:23:02.081Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-05T02:52:25.792Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Electrons","level":"3.1.1","depth":2,"next":{"title":"Muons","level":"3.1.2","depth":2,"path":"documentation/CMS_Recommendations/Muon.md","ref":"documentation/CMS_Recommendations/Muon.md","articles":[]},"previous":{"title":"Official Recommendations","level":"3.1","depth":1,"path":"documentation/CMS_Recommendations/README.md","ref":"documentation/CMS_Recommendations/README.md","articles":[{"title":"Electrons","level":"3.1.1","depth":2,"path":"documentation/CMS_Recommendations/Electron.md","ref":"documentation/CMS_Recommendations/Electron.md","articles":[]},{"title":"Muons","level":"3.1.2","depth":2,"path":"documentation/CMS_Recommendations/Muon.md","ref":"documentation/CMS_Recommendations/Muon.md","articles":[]},{"title":"MET","level":"3.1.3","depth":2,"path":"documentation/CMS_Recommendations/MET.md","ref":"documentation/CMS_Recommendations/MET.md","articles":[]},{"title":"VBF Jets","level":"3.1.4","depth":2,"path":"documentation/CMS_Recommendations/VBFjets.md","ref":"documentation/CMS_Recommendations/VBFjets.md","articles":[]},{"title":"FAT Jets","level":"3.1.5","depth":2,"path":"documentation/CMS_Recommendations/FATjet.md","ref":"documentation/CMS_Recommendations/FATjet.md","articles":[]},{"title":"Data","level":"3.1.6","depth":2,"path":"documentation/CMS_Recommendations/Data.md","ref":"documentation/CMS_Recommendations/Data.md","articles":[]},{"title":"Jet Energy Correctios","level":"3.1.7","depth":2,"path":"documentation/CMS_Recommendations/JetCorrections.md","ref":"documentation/CMS_Recommendations/JetCorrections.md","articles":[]},{"title":"L1 ECAL prefire","level":"3.1.8","depth":2,"path":"documentation/CMS_Recommendations/L1ECALprefire.md","ref":"documentation/CMS_Recommendations/L1ECALprefire.md","articles":[]},{"title":"Luminosity","level":"3.1.9","depth":2,"path":"documentation/CMS_Recommendations/Luminosity.md","ref":"documentation/CMS_Recommendations/Luminosity.md","articles":[]},{"title":"Pile-up","level":"3.1.10","depth":2,"path":"documentation/CMS_Recommendations/Pileup.md","ref":"documentation/CMS_Recommendations/Pileup.md","articles":[]},{"title":"Trigger","level":"3.1.11","depth":2,"path":"documentation/CMS_Recommendations/Trigger.md","ref":"documentation/CMS_Recommendations/Trigger.md","articles":[]}]},"dir":"ltr"},"config":{"gitbook":"*","theme":"default","variables":{},"plugins":[],"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"}},"file":{"path":"documentation/CMS_Recommendations/Electron.md","mtime":"2019-07-05T14:31:14.002Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-11-05T02:52:25.792Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
