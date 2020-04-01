@@ -13,9 +13,17 @@
    ```bash
    export PATH=$HOME/.local/bin:/cvmfs/cms-bril.cern.ch/brilconda/bin:$PATH
    ```
-3. Get the luminosity:
+3. Install the latest version of brilcalc
    ```bash
-   brilcalc lumi --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_PHYSICS.json -u /fb  -i /afs/cern.ch/user/r/rasharma/public/temp/processedLumis.json
+   pip install --user --upgrade brilws
+   ```
+   Sometime you may get a strange error. Then try to uninstall the brilcalc and then reinstall it. Somehow it works many times.
+   ```bash
+   pip uninstall -y brilws
+   ```
+4. Get the luminosity:
+   ```bash
+   brilcalc lumi --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_PHYSICS.json -u /fb  -i <JSON FILE PATH>/processedLumis.json
    ```
 
 **NOTE**: *For some reason this brilcalc command is not working on lpc. But it works fine on lxplus.*
