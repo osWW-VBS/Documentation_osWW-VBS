@@ -25,7 +25,8 @@
 
 * [Data-MC info](documentation/data-mc/README.md)
     - [Data sample](documentation/data-mc/datainfo.md)
-    - [MC Samples](documentation/data-mc/mc-cross-section.md)
+    - [MC Samples 2016](documentation/data-mc/mc-cross-section.md)
+    - [2018 data-mc Sample list](documentation/data-mc/2018_Data-MC_Sample_List.md)
     - [Generated Ntuples Details](documentation/data-mc/Ntuple_Details.md)
 
 ----
